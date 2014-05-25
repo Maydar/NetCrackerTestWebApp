@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="NetCrackerTestWebApp:war exploded">
+    <output-path>$PROJECT_DIR$/target/web-app</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="NetCrackerTestWebApp/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="NetCrackerTestWebApp" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>
