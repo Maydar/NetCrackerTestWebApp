@@ -23,7 +23,7 @@ public class DatabaseServiceImpl implements DatabaseService {
     }};
 
     private List<User> users = new ArrayList<User>() { {
-        add(new User("maxwell", "123", "Maidary Erdyneev", "fra@gmail.com", "webapp/img/Erdyneev.jpg"));
+        add(new User("maxwell", "velos", "Maidary Erdyneev", "fra@gmail.com", "webapp/img/Erdyneev.jpg"));
         add(new User("pavlov", "1234", "Maxim Pavlov", "baresco@gmail.com", "webapp/img/bar.jpg"));
     }};
 
@@ -42,9 +42,14 @@ public class DatabaseServiceImpl implements DatabaseService {
 
     @Override
     public boolean findUser(String userName, String password) {
-        boolean result = false;
+        boolean result = true;
+        System.out.println(userName);
+        System.out.println(password);
+        System.out.println("Seatching....");
         for(User user : users) {
             if (user.getUserName().equals(userName)) {
+                System.out.println("name is ok");
+                System.out.println(user.getPassword());
                 if (user.getPassword().equals(password)) {
                     result = true;
                 } else {
