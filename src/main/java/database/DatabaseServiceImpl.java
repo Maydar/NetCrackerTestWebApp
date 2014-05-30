@@ -59,11 +59,32 @@ public class DatabaseServiceImpl implements DatabaseService {
     }
 
     @Override
+    public User getUser(String userName, String Password) {
+        User result = null;
+        for(User user : users) {
+            if (user.getUserName().equals(userName)) {
+                if (user.getPassword().equals(Password)) {
+                    result = user;
+                } else {
+                    result = null;
+                }
+            }
+            else {
+                result = null;
+            }
+        }
+        return result;
+    }
+
+    @Override
     public List<Player> getPlayers() {
         return players;
     }
 
-
+    @Override
+    public List<User> getUsers() {
+        return users;
+    }
 
     @Override
     public String addPlayer(String name, String club, int number, String role) {
