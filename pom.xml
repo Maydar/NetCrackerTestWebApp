@@ -44,10 +44,6 @@
 
   </dependencies>
 
-
-
-
-
   <build>
     <finalName>web-app</finalName>
     <plugins>
@@ -67,6 +63,11 @@
             <configuration>
                 <failOnMissingWebXml>false</failOnMissingWebXml>
             </configuration>
+        </plugin>
+        <plugin>
+            <groupId>org.eclipse.jetty</groupId>
+            <artifactId>jetty-maven-plugin</artifactId>
+            <version>9.1.0.M0</version>
         </plugin>
     </plugins>
   </build>
