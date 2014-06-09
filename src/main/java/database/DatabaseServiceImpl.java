@@ -42,7 +42,7 @@ public class DatabaseServiceImpl implements DatabaseService {
 
     @Override
     public boolean findUser(String userName, String password) {
-        boolean result = true;
+        boolean result = false;
         System.out.println(userName);
         System.out.println(password);
         System.out.println("Seatching....");
@@ -52,12 +52,7 @@ public class DatabaseServiceImpl implements DatabaseService {
                 System.out.println(user.getPassword());
                 if (user.getPassword().equals(password)) {
                     result = true;
-                } else {
-                    result = false;
                 }
-            }
-            else {
-                result = false;
             }
         }
         return result;
